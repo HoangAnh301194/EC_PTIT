@@ -1,4 +1,5 @@
-# Báo cáo tiến độ nghiên cứu đề tài lớp ESP32 D23
+# Báo cáo tiến độ nghiên cứu đề tài lớp ESP32 D23 - Thiết kế bộ điều khiển và thuật toán điều khiển cho hệ thống Drone 
+
 ## A) Công việc đã làm
 - Tìm hiểu động học Drone
 - Vẽ sơ đồ tổng quan hệ thống 
