@@ -171,7 +171,7 @@ Trong hệ thống drone gồm các thành phần như động cơ BLDC, ESC, ES
 - Dễ dàng mở rộng, tích hợp thêm các chức năng mới mà không ảnh hưởng đến các phần đã hoạt động ổn định.
 - Giảm độ trễ trong xử lý tín hiệu, nâng cao hiệu suất và khả năng phản ứng của drone với môi trường thực tế.
 ## B) Công việc tiếp theo
-- Nghiên cứu sâu về động học và động lực học của Drone ( cái này củ chuối quá nên em chưa tìm hiểu được sâu ạ :< )
+- Nghiên cứu sâu về động học và động lực học của Drone
 - Bộ điều khiển PID trong Drone
 - Tìm hiểu thêm về Free RTOS
 ## C) Khó khăn
