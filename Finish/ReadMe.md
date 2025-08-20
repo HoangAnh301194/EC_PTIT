@@ -2,9 +2,16 @@
 ## Thiết kế hệ thống Drone sử dụng ESP32 và hệ điều hành thời gian thực (RTOS)
 1. Hệ điều hành RTOS là gì ? Tại sao lại sử dụng 
 - RTOS (Real-Time Operating System) là hệ điều hành chuyên dụng cho các hệ thống nhúng và IoT, được thiết kế để xử lý các tác vụ trong thời gian thực.
+
+    
+
+    
 - So sánh giữa RTOS và Loop thông thường 
     + Phương thức hoạt động : 
         - RTOS bản chất vẫn chạy lần lượt qua các tác vụ, tuy nhiên chỉ chạy với thời gian cho phép , nếu quá thời gian thì chuyển qua tác vụ khác , tránh làm mất thời gian hoạt động của các tác vụ khác, các task được thực thi liên tục, nhanh tới mức gần như hoạt động song song cùng 1 lúc -> hoạt động các task sẽ được ấn định theo thời gian thực mà ko phụ thuộc và yếu tố khác như delay từ các tác vụ trước
+
+        ![alt text](image-1.png)
+        
         - Vòng loop thông thường : chạy từ trên xuống và tiếp tục vòng tuần hoàn lặp lại , với lợi thế là đơn giản, dễ hiểu , phù hợp cho dự án nhỏ ít tác vụ, nhưng sẽ khó quản lí nếu mở rộng project. 
 - Ví dụ thực tiễn:
 
@@ -18,6 +25,8 @@ Một số tính năng chính của FreeRTOS (hệ điều hành được tích 
 
 - Task Scheduling (Lập lịch tác vụ):
 
+    ![alt text](image.png)
+
     Cho phép tạo nhiều task (giống như nhiều vòng loop() độc lập).
     - Ví dụ:
 
@@ -30,7 +39,7 @@ Một số tính năng chính của FreeRTOS (hệ điều hành được tích 
 - Semaphore và Mutex (Đồng bộ tài nguyên):
 
     Ngăn chặn xung đột khi nhiều task cùng truy cập một thiết bị.
-    -  Ví dụ: Một task đọc dữ liệu từ cảm biến I2C trong khi task khác cũng muốn gửi dữ liệu qua I2C → Mutex giúp “khóa” bus I2C để tránh lỗi.
+    -  Ví dụ: Một task đọc dữ liệu từ cảm biến I2C trong khi task khác cũng muốn gửi dữ liệu qua I2C -> Mutex giúp “khóa” bus I2C để tránh lỗi.
 
 - Queue (Hàng đợi):
 
@@ -71,7 +80,9 @@ Một số tính năng chính của FreeRTOS (hệ điều hành được tích 
         - Kiểm tra điện áp pin :
         - Kiểm tra tín hiệu GPS , tín hiệu điều khiển,...
 
-
+4. Giải thích tổng quan Code dự án
+- Code ESP32 : 
+    [https://github.com/HoangAnh301194/EC_PTIT/blob/main/Finish/testProject/main/main.c](https://github.com/HoangAnh301194/EC_PTIT/blob/main/Finish/testProject/main/main.c)
 ## ESP32 Configuration Web Site sử dụng giao tiếp BLE 
 1. BLE là gì ? sử dụng khi nào ? 
 - BLE (Bluetooth Low Energy) là phiên bản tiết kiệm năng lượng của Bluetooth, được thiết kế cho các thiết bị IoT.
@@ -154,5 +165,7 @@ Một số tính năng chính của FreeRTOS (hệ điều hành được tích 
         Sau khi cấu hình thành công, ESP32 có thể ngắt kết nối BLE hoặc giữ để người dùng quản lý.
 
 3. Giải thích tổng quan  code cho ESP và Web để có thể giao tiếp BLE 
-    
+    - Code ESP32 : [https://github.com/HoangAnh301194/EC_PTIT/blob/main/Finish/BLE/src/main.cpp](https://github.com/HoangAnh301194/EC_PTIT/blob/main/Finish/BLE/src/main.cpp)
+    - code Web : [https://github.com/HoangAnh301194/EC_PTIT/blob/main/Finish/BLE/src/Web_BLE.html](https://github.com/HoangAnh301194/EC_PTIT/blob/main/Finish/BLE/src/Web_BLE.html)
+    - link Web githubPages : [https://hoanganh301194.github.io/BLE_Website/](https://hoanganh301194.github.io/BLE_Website/)
 4. Demo hoạt động thực tế 
