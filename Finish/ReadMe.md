@@ -62,6 +62,7 @@ Một số tính năng chính của FreeRTOS (hệ điều hành được tích 
     Cho phép nhiều task đồng bộ theo sự kiện.
     - Ví dụ: Drone chỉ cất cánh khi cảm biến GPS đã định vị và pin đủ dung lượng.
 3. Trong dự án sử dụng RTOS thế nào ? 
+
 - Hệ thống Drone có thể phân chia thành các task chính:
 
     - Task đọc cảm biến (Sensor Task):
@@ -85,6 +86,8 @@ Một số tính năng chính của FreeRTOS (hệ điều hành được tích 
 
         - Kiểm tra điện áp pin :
         - Kiểm tra tín hiệu GPS , tín hiệu điều khiển,...
+
+        ![alt text](image-9.png)
 
 4. Giải thích tổng quan Code dự án
 - Code ESP32 : 
@@ -181,5 +184,5 @@ Một số tính năng chính của FreeRTOS (hệ điều hành được tích 
     ![alt text](image-6.png)
     ![alt text](image-7.png)
     ![alt text](image-8.png)
-    
+
     
