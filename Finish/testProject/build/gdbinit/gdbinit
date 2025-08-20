@@ -1,0 +1,2 @@
+source C:/Espressif/frameworks/esp-idf-v5.4.2/project/testProject/build/gdbinit/symbols
+source C:/Espressif/frameworks/esp-idf-v5.4.2/project/testProject/build/gdbinit/connect

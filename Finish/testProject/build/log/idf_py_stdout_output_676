@@ -1,0 +1,993 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  2 2025 14:52:55[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a560h ( 42336) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a588 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001a5ac vaddr=3ffb0000 size=023e8h (  9192) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=0001c99c vaddr=40080000 size=0367ch ( 13948) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15354h ( 86868) map[0m
+[0;32mI (151) esp_image: segment 5: paddr=0003537c vaddr=4008367c size=09788h ( 38792) load[0m
+[0;32mI (173) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (173) boot: Disabling RNG early entropy source...[0m
+[0;32mI (183) cpu_start: Multicore app[0m
+[0;32mI (192) cpu_start: Pro cpu start user code[0m
+[0;32mI (192) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (192) app_init: Application information:[0m
+[0;32mI (192) app_init: Project name:     blink[0m
+[0;32mI (196) app_init: App version:      v5.4.2[0m
+[0;32mI (199) app_init: Compile time:     Aug  2 2025 14:51:45[0m
+[0;32mI (204) app_init: ELF file SHA256:  ce99dfc78...[0m
+[0;32mI (209) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (213) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (216) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (220) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (225) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (231) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFB2CB0 len 0002D350 (180 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 4008CE04 len 000131FC (76 KiB): IRAM[0m
+[0;32mI (258) spi_flash: detected chip: generic[0m
+[0;32mI (261) spi_flash: flash io: dio[0m
+[0;33mW (264) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (276) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[0;32mI (294) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+EC - PTIT
+[0;32mI (294) main: MQ Raw Value: 564[0m
+[0;32mI (294) main_task: Returned from app_main()[0m
+EC - PTIT
+[0;32mI (2294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (4294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (6294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (8294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (10294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (12294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (14294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (16294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (18294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (20294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (22294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (24294) main: MQ Raw Value: 16[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (26294) main: MQ Raw Value: 114[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (28294) main: MQ Raw Value: 144[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (30294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (32294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (34294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (36294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (38294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (40294) main: MQ Raw Value: 141[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (42294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (44294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (46294) main: MQ Raw Value: 91[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (48294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (50294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (52294) main: MQ Raw Value: 231[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (54294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (56294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (58294) main: MQ Raw Value: 109[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (60294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (62294) main: MQ Raw Value: 107[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (64294) main: MQ Raw Value: 12[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (66294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (68294) main: MQ Raw Value: 93[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (70294) main: MQ Raw Value: 76[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (72294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (74294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (76294) main: MQ Raw Value: 135[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (78294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (80294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (82294) main: MQ Raw Value: 176[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (84294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (86294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (88294) main: MQ Raw Value: 35[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (90294) main: MQ Raw Value: 146[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (92294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (94294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (96294) main: MQ Raw Value: 182[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (98294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (100294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (102294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (104294) main: MQ Raw Value: 246[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (106294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (108294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (110294) main: MQ Raw Value: 48[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (112294) main: MQ Raw Value: 183[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (114294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (116294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (118294) main: MQ Raw Value: 43[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (120294) main: MQ Raw Value: 209[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (122294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (124294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (126294) main: MQ Raw Value: 126[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (128294) main: MQ Raw Value: 25[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (130294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (132294) main: MQ Raw Value: 87[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (134294) main: MQ Raw Value: 61[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (136294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (138294) main: MQ Raw Value: 80[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (140294) main: MQ Raw Value: 55[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (142294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (144294) main: MQ Raw Value: 44[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (146294) main: MQ Raw Value: 159[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (148294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (150294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (152294) main: MQ Raw Value: 245[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (154294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (156294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (158294) main: MQ Raw Value: 176[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (160294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (162294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (164294) main: MQ Raw Value: 177[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (166294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (168294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (170294) main: MQ Raw Value: 43[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (172294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (174294) main: MQ Raw Value: 139[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (176294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (178294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (180294) main: MQ Raw Value: 188[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (182294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (184294) main: MQ Raw Value: 75[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (186294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (188294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (190294) main: MQ Raw Value: 243[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (192294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (194294) main: MQ Raw Value: 86[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (196294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (198294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (200294) main: MQ Raw Value: 210[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (202294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (204294) main: MQ Raw Value: 124[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (206294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (208294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (210294) main: MQ Raw Value: 186[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (212294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (214294) main: MQ Raw Value: 157[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (216294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (218294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (220294) main: MQ Raw Value: 176[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (222294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (224294) main: MQ Raw Value: 161[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (226294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (228294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (230294) main: MQ Raw Value: 234[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (232294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (234294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (236294) main: MQ Raw Value: 219[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (238294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (240294) main: MQ Raw Value: 30[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (242294) main: MQ Raw Value: 81[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (244294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (246294) main: MQ Raw Value: 167[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (248294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (250294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (252294) main: MQ Raw Value: 175[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (254294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (256294) main: MQ Raw Value: 82[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (258294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (260294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (262294) main: MQ Raw Value: 124[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (264294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (266294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (268294) main: MQ Raw Value: 945[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (270294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (272294) main: MQ Raw Value: 4095[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (274294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (276294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (278294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (280294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (282294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (284294) main: MQ Raw Value: 68[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (286294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (288294) main: MQ Raw Value: 1005[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (290294) main: MQ Raw Value: 1248[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (292294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (294294) main: MQ Raw Value: 47[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (296294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (298294) main: MQ Raw Value: 4095[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (300294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (302294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (304294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (306294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (308294) main: MQ Raw Value: 23[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (310294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (312294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (314294) main: MQ Raw Value: 2[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (316294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (318294) main: MQ Raw Value: 101[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (320294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (322294) main: MQ Raw Value: 82[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (324294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (326294) main: MQ Raw Value: 43[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (328294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (330294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (332294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (334294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (336294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (338294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (340294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (342294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (344294) main: MQ Raw Value: 20[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (346294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (348294) main: MQ Raw Value: 45[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (350294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (352294) main: MQ Raw Value: 69[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (354294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (356294) main: MQ Raw Value: 72[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (358294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (360294) main: MQ Raw Value: 32[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (362294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (364294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (366294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (368294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (370294) main: MQ Raw Value: 56[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (372294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (374294) main: MQ Raw Value: 95[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (376294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (378294) main: MQ Raw Value: 47[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (380294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (382294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (384294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (386294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (388294) main: MQ Raw Value: 134[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (390294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (392294) main: MQ Raw Value: 82[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (394294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (396294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (398294) main: MQ Raw Value: 49[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (400294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (402294) main: MQ Raw Value: 108[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (404294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (406294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (408294) main: MQ Raw Value: 97[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (410294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (412294) main: MQ Raw Value: 34[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (414294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (416294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (418294) main: MQ Raw Value: 137[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (420294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (422294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (424294) main: MQ Raw Value: 68[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (426294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (428294) main: MQ Raw Value: 80[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (430294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (432294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (434294) main: MQ Raw Value: 141[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (436294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (438294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (440294) main: MQ Raw Value: 144[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (442294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (444294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (446294) main: MQ Raw Value: 79[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (448294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (450294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (452294) main: MQ Raw Value: 65[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (454294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (456294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (458294) main: MQ Raw Value: 80[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (460294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (462294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (464294) main: MQ Raw Value: 111[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (466294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (468294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (470294) main: MQ Raw Value: 128[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (472294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (474294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (476294) main: MQ Raw Value: 115[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (478294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (480294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (482294) main: MQ Raw Value: 146[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (484294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (486294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (488294) main: MQ Raw Value: 69[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (490294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (492294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (494294) main: MQ Raw Value: 65[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (496294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (498294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (500294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (502294) main: MQ Raw Value: 15[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (504294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (506294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (508294) main: MQ Raw Value: 45[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (510294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (512294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (514294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (516294) main: MQ Raw Value: 41[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (518294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (520294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (522294) main: MQ Raw Value: 43[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (524294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (526294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (528294) main: MQ Raw Value: 34[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (530294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (532294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (534294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (536294) main: MQ Raw Value: 18[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (538294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (540294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (542294) main: MQ Raw Value: 42[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (544294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (546294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (548294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (550294) main: MQ Raw Value: 48[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (552294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (554294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (556294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (558294) main: MQ Raw Value: 53[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (560294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (562294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (564294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (566294) main: MQ Raw Value: 16[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (568294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (570294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (572294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (574294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (576294) main: MQ Raw Value: 48[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (578294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (580294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (582294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (584294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (586294) main: MQ Raw Value: 47[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (588294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (590294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (592294) main: MQ Raw Value: 55[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (594294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (596294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (598294) main: MQ Raw Value: 8[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (600294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (602294) main: MQ Raw Value: 18[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (604294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (606294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (608294) main: MQ Raw Value: 32[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (610294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (612294) main: MQ Raw Value: 25[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (614294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (616294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (618294) main: MQ Raw Value: 59[0m
+EC - PTIT
+EC - PTIT
+[0;32mI (620294) main: MQ Raw Value: 0[0m
+EC - PTIT
+EC - PTIT
+[0;32m

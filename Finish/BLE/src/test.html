@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BLE & MQTT Config</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        
+        /* Navigation Bar */
+        .nav-bar {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .nav-button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        .nav-button.active {
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            transform: scale(1.05);
+        }
+        
+        /* Page Content */
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .btn-primary {
+            background-color: #dbf300;
+            border: none;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #f1e96d;
+            transform: translateY(-1px);
+        }
+        
+        .btn-info {
+            background: linear-gradient(45deg, #17a2b8, #138496);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .btn-success {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .btn-warning {
+            background: linear-gradient(45deg, #ffc107, #fd7e14);
+            border: none;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .btn-danger {
+            background: linear-gradient(45deg, #dc3545, #e83e8c);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 150px;
+            background: #222;
+            color: #0f0;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        
+        /* Modal styles (giữ nguyên từ code cũ) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0; width: 100vw; height: 100vh;
+            overflow: auto;
+            background: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background: #fff; color: #222;
+            margin: 10% auto; padding: 20px;
+            border-radius: 10px; width: 90%; max-width: 400px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+        .close {
+            color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;
+        }
+        .close:hover { color: #333; }
+        #wifiListPopup > div {
+            padding: 10px; border-bottom: 1px solid #eee; cursor: pointer;
+            display: flex; align-items: center;
+        }
+        #wifiListPopup > div:hover { background: #f0f0f0; }
+        .dropdown-custom {
+            display: none;
+        }
+        .selected {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: white;
+            color: black;
+            cursor: default;
+            margin-bottom: 10px;
+        }
+        #wifiListPopup {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .scanning-indicator {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-style: italic;
+        }
+        .loading-spinner {
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #3498db;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #wifiListPopup > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            gap: 10px;
+        }
+        #wifiListPopup img {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        /* New Page Specific Styles */
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-online { background: #28a745; }
+        .status-offline { background: #dc3545; }
+        
+        .chart-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            color: #333;
+        }
+        
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .data-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .data-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .data-label {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">BLE & MQTT Config System</h1>
+        
+        <!-- Navigation Bar -->
+        <div class="nav-bar">
+            <button class="nav-button active" onclick="showPage('main')">🏠 Main Control</button>
+            <button class="nav-button" onclick="showPage('monitoring')">📊 Monitoring</button>
+            <button class="nav-button" onclick="showPage('settings')">⚙️ Settings</button>
+            <button class="nav-button" onclick="showPage('logs')">📋 Logs</button>
+        </div>
+
+        <!-- Main Control Page -->
+        <div id="main" class="page-content active">
+            <button class="btn btn-primary btn-block" id="toggleButton" onclick="toggleFunction()">SCAN</button>
+            
+            <h4>WiFi Configuration</h4>
+            <button class="btn btn-info btn-block" id="scanWifiBtn" onclick="scanWifi()">Scan WiFi Networks</button>
+            <input type="hidden" id="SSID" />
+            <div id="selectedSSID" class="selected">-- Chưa chọn WiFi --</div>
+            <input type="password" id="Password" placeholder="Enter Password" class="form-control mb-2">
+            <button id="connectWifiBtn" onclick="ConnectWifi()" class="btn btn-success btn-block" disabled>Connect</button> 
+            
+            <!-- WiFi Modal (giữ nguyên) -->
+            <div id="wifiModal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close" onclick="closeWifiModal()">&times;</span>
+                    <h2>Select WiFi</h2>
+                    <button onclick="forceRescanWifi()" class="btn btn-primary" style="margin-bottom: 10px;">🔄 Rescan</button>
+                    <div id="wifiListPopup">
+                        <div class="scanning-indicator">
+                            <div class="loading-spinner"></div>
+                            Scanning WiFi...
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h4>MQTT Broker Configuration</h4>
+            <input type="text" id="mqttServer" placeholder="Enter MQTT Server" class="form-control mb-2">
+            <input type="text" id="mqttPort" placeholder="Enter MQTT Port" class="form-control mb-2">
+            <input type="text" id="username" placeholder="Enter Broker Username" class="form-control mb-2">
+            <input type="password" id="brokerPassword" placeholder="Enter Broker Password" class="form-control mb-2">
+            <button id="connectMqttBtn" onclick="ConnectMqtt()" class="btn btn-success btn-block" disabled>Connect</button> 
+            
+            <h4>MQTT Publish</h4>
+            <input type="text" id="mqttTopic" placeholder="Enter Topic" class="form-control mb-2">
+            <input type="text" id="mqttMessage" placeholder="Enter Message" class="form-control mb-2">
+            <button id="sendMqttBtn" onclick="publishMessage()" class="btn btn-warning btn-block" disabled>Send</button>
+            
+            <h4>MQTT Counting</h4>
+            <input type="text" id="interval" placeholder="Enter interval" class="form-control mb-2">
+            <button id="sendInterval" onclick="interval()" class="btn btn-warning btn-block" disabled>Set_Interval</button>
+            <button id="count" onclick="counting()" class="btn btn-warning btn-block" disabled>Count</button>
+            <button id="reset" onclick="resetCounting()" class="btn btn-warning btn-block" disabled>Reset</button>
+            <button id="pause" onclick="pause()" class="btn btn-warning btn-block" disabled>Pause</button>
+            
+            <h4>Interaction WebBLE & ESP32</h4>
+            <div id="bleExchangeDisplay" style="
+                background-color: #fff;
+                color: #000;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                padding: 10px;
+                height: 100px;
+                overflow-y: auto;
+                font-family: monospace;
+                font-size: 13px;
+            "></div>
+        </div>
+
+        <!-- Monitoring Page -->
+        <div id="monitoring" class="page-content">
+            <h2>📊 System Monitoring</h2>
+            
+            <div class="feature-card">
+                <h3>Connection Status</h3>
+                <p><span class="status-indicator status-offline" id="bleStatus"></span>BLE Connection: <span id="bleStatusText">Disconnected</span></p>
+                <p><span class="status-indicator status-offline" id="wifiStatus"></span>WiFi Connection: <span id="wifiStatusText">Disconnected</span></p>
+                <p><span class="status-indicator status-offline" id="mqttStatus"></span>MQTT Connection: <span id="mqttStatusText">Disconnected</span></p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Real-time Data</h3>
+                <div class="data-grid">
+                    <div class="data-item">
+                        <div class="data-value" id="messageCount">0</div>
+                        <div class="data-label">Messages Sent</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-value" id="countValue">0</div>
+                        <div class="data-label">Current Count</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-value" id="uptime">00:00:00</div>
+                        <div class="data-label">Uptime</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="data-value" id="signalStrength">N/A</div>
+                        <div class="data-label">WiFi Signal</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3>Quick Actions</h3>
+                <button class="btn btn-info" onclick="refreshStatus()">🔄 Refresh Status</button>
+                <button class="btn btn-warning" onclick="requestDeviceInfo()">📱 Get Device Info</button>
+                <button class="btn btn-danger" onclick="emergencyStop()">🚨 Emergency Stop</button>
+            </div>
+        </div>
+
+        <!-- Settings Page -->
+        <div id="settings" class="page-content">
+            <h2>⚙️ Advanced Settings</h2>
+            
+            <div class="feature-card">
+                <h3>Device Configuration</h3>
+                <label>Device Name:</label>
+                <input type="text" id="deviceName" value="BLE_Wifi" class="form-control">
+                
+                <label>Update Interval (ms):</label>
+                <input type="number" id="updateInterval" value="1000" class="form-control">
+                
+                <label>Auto-reconnect:</label>
+                <input type="checkbox" id="autoReconnect" checked> Enable auto-reconnect
+            </div>
+
+            <div class="feature-card">
+                <h3>MQTT Advanced Settings</h3>
+                <label>Keep Alive (seconds):</label>
+                <input type="number" id="keepAlive" value="60" class="form-control">
+                
+                <label>QoS Level:</label>
+                <select id="qosLevel" class="form-control">
+                    <option value="0">0 - At most once</option>
+                    <option value="1" selected>1 - At least once</option>
+                    <option value="2">2 - Exactly once</option>
+                </select>
+                
+                <label>Retain Messages:</label>
+                <input type="checkbox" id="retainMessages"> Retain published messages
+            </div>
+
+            <div class="feature-card">
+                <h3>Data Export</h3>
+                <button class="btn btn-info" onclick="exportConfig()">📤 Export Configuration</button>
+                <button class="btn btn-warning" onclick="importConfig()">📥 Import Configuration</button>
+                <button class="btn btn-danger" onclick="resetConfig()">🔄 Reset to Default</button>
+            </div>
+        </div>
+
+        <!-- Logs Page -->
+        <div id="logs" class="page-content">
+            <h2>📋 System Logs</h2>
+            
+            <div class="feature-card">
+                <h3>Log Controls</h3>
+                <button class="btn btn-info" onclick="clearLog()">🗑️ Clear Logs</button>
+                <button class="btn btn-warning" onclick="exportLogs()">📤 Export Logs</button>
+                <button class="btn btn-success" onclick="toggleAutoScroll()">📜 Toggle Auto-scroll</button>
+            </div>
+
+            <h4>Terminal Output</h4>
+            <textarea id="textareaNotification" readonly></textarea>
+        </div>
+    </div>
+
+    <script>
+        // Variables (giữ nguyên từ code cũ)
+        var deviceName = 'BLE_Wifi';
+        var bleService = "0000181f-0000-1000-8000-00805f9b34fb";
+        var RXUUID = "6e400003-b5a3-f393-e0a9-e50e24dcca9e" ;
+        var TXUUID = "6e400002-b5a3-f393-e0a9-e50e24dcca9e" ;
+        var RX ;
+        var TX ;
+        var dev;
+        let wifiBuffer = "";
+        let receivingWifiList = false;
+        let wifiNetworks = [];
+        let isScanning = false;
+        
+        // Monitoring variables
+        let messageCount = 0;
+        let startTime = Date.now();
+        let currentCount = 0;
+        let autoScroll = true;
+        
+        // MQTT connection (giữ nguyên)
+        var mqttClient = mqtt.connect('ws://192.168.1.34:9001');
+
+        // Navigation function
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Remove active class from all nav buttons
+            const navButtons = document.querySelectorAll('.nav-button');
+            navButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Update monitoring if switching to monitoring page
+            if (pageId === 'monitoring') {
+                updateMonitoringDisplay();
+            }
+        }
+
+        // Monitoring functions
+        function updateMonitoringDisplay() {
+            // Update connection status
+            updateConnectionStatus('ble', dev && dev.gatt && dev.gatt.connected);
+            updateConnectionStatus('mqtt', mqttClient && mqttClient.connected);
+            
+            // Update counters
+            document.getElementById('messageCount').textContent = messageCount;
+            document.getElementById('countValue').textContent = currentCount;
+            
+            // Update uptime
+            const uptimeSeconds = Math.floor((Date.now() - startTime) / 1000);
+            const hours = Math.floor(uptimeSeconds / 3600);
+            const minutes = Math.floor((uptimeSeconds % 3600) / 60);
+            const seconds = uptimeSeconds % 60;
+            document.getElementById('uptime').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function updateConnectionStatus(type, isConnected) {
+            const statusElement = document.getElementById(type + 'Status');
+            const textElement = document.getElementById(type + 'StatusText');
+            
+            if (isConnected) {
+                statusElement.className = 'status-indicator status-online';
+                textElement.textContent = 'Connected';
+            } else {
+                statusElement.className = 'status-indicator status-offline';
+                textElement.textContent = 'Disconnected';
+            }
+        }
+
+        function refreshStatus() {
+            updateMonitoringDisplay();
+            log("📊 Status refreshed");
+        }
+
+        function requestDeviceInfo() {
+            if (!TX) {
+                log("❌ BLE not connected");
+                return;
+            }
+            const command = new TextEncoder().encode("GET_INFO");
+            TX.writeValue(command)
+                .then(() => log("📱 Device info requested"))
+                .catch(error => log("Error requesting device info: " + error));
+        }
+
+        function emergencyStop() {
+            if (!TX) {
+                log("❌ BLE not connected");
+                return;
+            }
+            const command = new TextEncoder().encode("EMERGENCY_STOP");
+            TX.writeValue(command)
+                .then(() => log("🚨 Emergency stop sent"))
+                .catch(error => log("Error sending emergency stop: " + error));
+        }
+
+        // Settings functions
+        function exportConfig() {
+            const config = {
+                deviceName: document.getElementById('deviceName').value,
+                updateInterval: document.getElementById('updateInterval').value,
+                autoReconnect: document.getElementById('autoReconnect').checked,
+                keepAlive: document.getElementById('keepAlive').value,
+                qosLevel: document.getElementById('qosLevel').value,
+                retainMessages: document.getElementById('retainMessages').checked
+            };
+            
+            const dataStr = JSON.stringify(config, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'ble_mqtt_config.json';
+            link.click();
+            URL.revokeObjectURL(url);
+            
+            log("📤 Configuration exported");
+        }
+
+        function importConfig() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = (event) => {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        try {
+                            const config = JSON.parse(e.target.result);
+                            // Apply configuration
+                            document.getElementById('deviceName').value = config.deviceName || 'BLE_Wifi';
+                            document.getElementById('updateInterval').value = config.updateInterval || 1000;
+                            document.getElementById('autoReconnect').checked = config.autoReconnect !== false;
+                            document.getElementById('keepAlive').value = config.keepAlive || 60;
+                            document.getElementById('qosLevel').value = config.qosLevel || '1';
+                            document.getElementById('retainMessages').checked = config.retainMessages || false;
+                            
+                            log("📥 Configuration imported successfully");
+                        } catch (error) {
+                            log("❌ Error importing configuration: " + error.message);
+                        }
+                    };
+                    reader.readAsText(file);
+                }
+            };
+            input.click();
+        }
+
+        function resetConfig() {
+            document.getElementById('deviceName').value = 'BLE_Wifi';
+            document.getElementById('updateInterval').value = '1000';
+            document.getElementById('autoReconnect').checked = true;
+            document.getElementById('keepAlive').value = '60';
+            document.getElementById('qosLevel').value = '1';
+            document.getElementById('retainMessages').checked = false;
+            log("🔄 Configuration reset to default");
+        }
+
+        // Log functions
+        function exportLogs() {
+            const logs = document.getElementById('textareaNotification').value;
+            const dataBlob = new Blob([logs], {type: 'text/plain'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'system_logs.txt';
+            link.click();
+            URL.revokeObjectURL(url);
+            
+            log("📤 Logs exported");
+        }
+
+        function toggleAutoScroll() {
+            autoScroll = !autoScroll;
+            log(autoScroll ? "📜 Auto-scroll enabled" : "📜 Auto-scroll disabled");
+        }
+
+        // Update monitoring every second
+        setInterval(updateMonitoringDisplay, 1000);
+
+        // Original functions (giữ nguyên tất cả functions cũ)
+        function log(text) {
+            const textarea = document.getElementById("textareaNotification");
+            const timestamp = new Date().toLocaleTimeString();
+            textarea.value += `[${timestamp}] ${text}\n`;
+            if (autoScroll) {
+                textarea.scrollTop = textarea.scrollHeight;
+            }
+        }
+        
+        function clearLog() {
+            document.getElementById("textareaNotification").value = "";
+        }
+
+        // MQTT events
+        mqttClient.on("connect", function () {
+            clearLog();
+            log("Connected to MQTT Broker");
+            document.getElementById("sendMqttBtn").disabled = false;
+            document.getElementById("connectWifiBtn").disabled = false;
+        });
+        
+        mqttClient.on("close", function () {
+            log("Disconnected from MQTT Broker. Reconnecting...");
+            setTimeout(() => {
+                mqttClient.reconnect();
+            }, 500);
+        });
+        
+        mqttClient.on("error", function (err) {
+            log("MQTT Error: " + err.message);
+        });
+
+        function parseWifiNetworks(wifiString) {
+            const networks = [];
+            const entries = wifiString.split("|");
+            entries.forEach(entry => {
+                const parts = entry.split(";");
+                if (parts.length === 3) {
+                    const ssid = parts[0];
+                    const signal = parseInt(parts[1]);
+                    const security = parts[2];
+                    networks.push({
+                        ssid: ssid,
+                        signal: signal,
+                        security: security
+                    });
+                }
+            });
+            networks.sort((a, b) => b.signal - a.signal);
+            return networks;
+        }
+
+        function getWifiSignalIcon(signal) {
+            if (signal > -40) return "excellent.png";
+            else if (signal > -60) return "good.png";
+            else if (signal > -80) return "medium.png";
+            else return "weak.png";
+        }
+
+        function showWifiPopupWithScanning() {
+            const list = document.getElementById("wifiListPopup");
+            list.innerHTML = `
+                <div class="scanning-indicator">
+                    <div class="loading-spinner"></div>
+                    Đang quét mạng WiFi...
+                </div>
+            `;
+            document.getElementById("wifiModal").style.display = "block";
+            isScanning = true;
+        }
+
+        function removeScanningIndicator() {
+            const scanningIndicator = document.querySelector(".scanning-indicator");
+            if (scanningIndicator) {
+                scanningIndicator.remove();
+            }
+            isScanning = false;
+        }
+
+        function populateWifiPopup(networks) {
+            const list = document.getElementById("wifiListPopup");
+            list.innerHTML = "";
+            networks.forEach(network => {
+                const item = document.createElement("div");
+                const iconUrl = getWifiSignalIcon(network.signal);
+                item.innerHTML = `
+                    <img src="${iconUrl}" width="20" height="20" style="margin-right:8px;" title="${network.signal} dBm">
+                    <span style="flex:1;">${network.ssid}</span>
+                    <span style="margin-left:10px;">${network.security === "SECURED" ? "🔒" : "🔓"}</span>
+                `;
+                item.onclick = () => {
+                    document.getElementById("SSID").value = network.ssid;
+                    document.getElementById("selectedSSID").textContent = network.ssid + (network.security === "SECURED" ? " 🔒" : " 🔓");
+                    closeWifiModal();
+                };
+                list.appendChild(item);
+            });
+            document.getElementById("wifiModal").style.display = "block";
+        }
+
+        function closeWifiModal() {
+            document.getElementById("wifiModal").style.display = "none";
+            isScanning = false;
+        }
+
+        function scanWifi() {
+            if (!dev || !dev.gatt.connected) {
+                log("❌ BLE not connected. Please connect to BLE device first!");
+                return;
+            }
+            if (wifiNetworks.length > 0) {
+                log("📋 Showing previously scanned WiFi list...");
+                populateWifiPopup(wifiNetworks);
+                return;
+            }

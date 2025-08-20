@@ -1,0 +1,1405 @@
+boot.esp32: SPI Speed �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug  2 2025 14:52:55[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b318h ( 45848) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b340 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001b364 vaddr=3ffb0000 size=02440h (  9280) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d7ac vaddr=40080000 size=0286ch ( 10348) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=16de0h ( 93664) map[0m
+[0;32mI (155) esp_image: segment 5: paddr=00036e08 vaddr=4008286c size=0a868h ( 43112) load[0m
+[0;32mI (178) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (178) boot: Disabling RNG early entropy source...[0m
+[0;32mI (189) cpu_start: Multicore app[0m
+[0;32mI (197) cpu_start: Pro cpu start user code[0m
+[0;32mI (197) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (197) app_init: Application information:[0m
+[0;32mI (197) app_init: Project name:     blink[0m
+[0;32mI (201) app_init: App version:      v5.4.2[0m
+[0;32mI (205) app_init: Compile time:     Aug  2 2025 14:51:45[0m
+[0;32mI (210) app_init: ELF file SHA256:  d8c3ef43f...[0m
+[0;32mI (214) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (218) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (222) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (226) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (236) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFB2D80 len 0002D280 (180 KiB): DRAM[0m
+[0;32mI (246) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (257) heap_init: At 4008D0D4 len 00012F2C (75 KiB): IRAM[0m
+[0;32mI (264) spi_flash: detected chip: generic[0m
+[0;32mI (266) spi_flash: flash io: dio[0m
+[0;33mW (269) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (281) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (289) main_task: Started on CPU0[0m
+[0;32mI (299) main_task: Calling app_main()[0m
+[0;32mI (299) BLDC_Control: Khởi động ứng dụng điều khiển BLDC FreeRTOS ESP32[0m
+[0;32mI (299) BLDC_Control: PWM đã khởi tạo: 50 Hz, GPIO25, độ phân giải 16-bit[0m
+[0;32mI (309) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (309) BLDC_Control: Task điều khiển BLDC bằng biến trở đã khởi động[0m
+EC - PTIT
+[0;32mI (319) BLDC_Control: CẢNH BÁO: Tháo cánh quạt trước khi test![0m
+[0;32mI (319) BLDC_Control: Tất cả các task đã được tạo thành công![0m
+[0;32mI (329) BLDC_Control: Giữ biến trở ở vị trí MINIMUM trong 1.5s để ARM[0m
+[0;32mI (319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (339) BLDC_Control: Bắt đầu arming... Giữ biến trở ở minimum![0m
+[0;32mI (339) BLDC_Control: AN TOÀN: Tháo cánh quạt và giữ biến trở ở minimum để bắt đầu![0m
+[0;32mI (349) BLDC_Control: Heap còn trống: 291884 bytes[0m
+[0;32mI (359) main_task: Returned from app_main()[0m
+[0;32mI (369) BLDC_Control: BLDC đã Armed: KHÔNG[0m
+[0;32mI (379) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (379) BLDC_Control: Giá trị biến trở làm mịn: 0.0[0m
+[0;32mI (389) BLDC_Control: ==========================[0m
+[0;32mI (479) BLDC_Control: Tiến trình arming: 8.7%[0m
+[0;32mI (719) BLDC_Control: Tiến trình arming: 24.7%[0m
+[0;32mI (959) BLDC_Control: Tiến trình arming: 40.7%[0m
+[0;32mI (1199) BLDC_Control: Tiến trình arming: 56.7%[0m
+EC - PTIT
+[0;32mI (1439) BLDC_Control: Tiến trình arming: 72.7%[0m
+[0;32mI (1679) BLDC_Control: Tiến trình arming: 88.7%[0m
+[0;32mI (1879) BLDC_Control: >>> BLDC ĐÃ ARM! Bây giờ có thể tăng throttle.[0m
+[0;32mI (1879) BLDC_Control: >>> CẢNH BÁO: Motor đã sẵn sàng quay![0m
+[0;32mI (1919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (1959) BLDC_Control: ADC:    8, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (1999) BLDC_Control: ADC:   27, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (2039) BLDC_Control: ADC:   56, Throttle: 1013 μs (1.3%)[0m
+[0;32mI (2079) BLDC_Control: ADC:   92, Throttle: 1022 μs (2.2%)[0m
+[0;32mI (2119) BLDC_Control: ADC:  136, Throttle: 1033 μs (3.3%)[0m
+[0;32mI (2159) BLDC_Control: ADC:  187, Throttle: 1045 μs (4.5%)[0m
+[0;32mI (2199) BLDC_Control: ADC:  243, Throttle: 1059 μs (5.9%)[0m
+[0;32mI (2239) BLDC_Control: ADC:  303, Throttle: 1073 μs (7.3%)[0m
+[0;32mI (2279) BLDC_Control: ADC:  364, Throttle: 1088 μs (8.8%)[0m
+[0;32mI (2319) BLDC_Control: ADC:  429, Throttle: 1104 μs (10.4%)[0m
+EC - PTIT
+[0;32mI (2359) BLDC_Control: ADC:  499, Throttle: 1121 μs (12.1%)[0m
+[0;32mI (2399) BLDC_Control: ADC:  573, Throttle: 1139 μs (13.9%)[0m
+[0;32mI (2439) BLDC_Control: ADC:  649, Throttle: 1158 μs (15.8%)[0m
+[0;32mI (2479) BLDC_Control: ADC:  733, Throttle: 1178 μs (17.8%)[0m
+[0;32mI (2519) BLDC_Control: ADC:  822, Throttle: 1200 μs (20.0%)[0m
+[0;32mI (2559) BLDC_Control: ADC:  914, Throttle: 1223 μs (22.3%)[0m
+[0;32mI (2599) BLDC_Control: ADC: 1018, Throttle: 1248 μs (24.8%)[0m
+[0;32mI (2639) BLDC_Control: ADC: 1129, Throttle: 1275 μs (27.5%)[0m
+[0;32mI (2679) BLDC_Control: ADC: 1241, Throttle: 1303 μs (30.3%)[0m
+[0;32mI (2719) BLDC_Control: ADC: 1353, Throttle: 1330 μs (33.0%)[0m
+[0;32mI (2759) BLDC_Control: ADC: 1467, Throttle: 1358 μs (35.8%)[0m
+[0;32mI (2799) BLDC_Control: ADC: 1585, Throttle: 1387 μs (38.7%)[0m
+[0;32mI (2839) BLDC_Control: ADC: 1705, Throttle: 1416 μs (41.6%)[0m
+[0;32mI (2879) BLDC_Control: ADC: 1830, Throttle: 1446 μs (44.6%)[0m
+[0;32mI (2919) BLDC_Control: ADC: 1963, Throttle: 1479 μs (47.9%)[0m
+[0;32mI (2959) BLDC_Control: ADC: 2101, Throttle: 1513 μs (51.3%)[0m
+[0;32mI (2999) BLDC_Control: ADC: 2248, Throttle: 1548 μs (54.8%)[0m
+[0;32mI (3039) BLDC_Control: ADC: 2409, Throttle: 1588 μs (58.8%)[0m
+[0;32mI (3079) BLDC_Control: ADC: 2577, Throttle: 1629 μs (62.9%)[0m
+[0;32mI (3119) BLDC_Control: ADC: 2729, Throttle: 1666 μs (66.6%)[0m
+[0;32mI (3159) BLDC_Control: ADC: 2866, Throttle: 1699 μs (69.9%)[0m
+[0;32mI (3199) BLDC_Control: ADC: 2989, Throttle: 1729 μs (72.9%)[0m
+[0;32mI (3239) BLDC_Control: ADC: 3099, Throttle: 1756 μs (75.6%)[0m
+[0;32mI (3279) BLDC_Control: ADC: 3199, Throttle: 1781 μs (78.1%)[0m
+[0;32mI (3319) BLDC_Control: ADC: 3288, Throttle: 1802 μs (80.2%)[0m
+[0;32mI (3319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (3319) BLDC_Control: Heap còn trống: 296092 bytes[0m
+[0;32mI (3319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (3319) BLDC_Control: Throttle hiện tại: 1802 μs (80.2%)[0m
+EC - PTIT
+[0;32mI (3329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (3329) BLDC_Control: Giá trị biến trở làm mịn: 3288.7[0m
+[0;32mI (3339) BLDC_Control: ==========================[0m
+[0;32mI (3359) BLDC_Control: ADC: 3369, Throttle: 1822 μs (82.2%)[0m
+[0;32mI (3399) BLDC_Control: ADC: 3441, Throttle: 1840 μs (84.0%)[0m
+[0;32mI (3439) BLDC_Control: ADC: 3507, Throttle: 1856 μs (85.6%)[0m
+[0;32mI (3479) BLDC_Control: ADC: 3566, Throttle: 1870 μs (87.0%)[0m
+[0;32mI (3519) BLDC_Control: ADC: 3618, Throttle: 1883 μs (88.3%)[0m
+[0;32mI (3559) BLDC_Control: ADC: 3666, Throttle: 1895 μs (89.5%)[0m
+[0;32mI (3599) BLDC_Control: ADC: 3709, Throttle: 1905 μs (90.5%)[0m
+[0;32mI (3639) BLDC_Control: ADC: 3747, Throttle: 1915 μs (91.5%)[0m
+[0;32mI (3679) BLDC_Control: ADC: 3782, Throttle: 1923 μs (92.3%)[0m
+[0;32mI (3719) BLDC_Control: ADC: 3813, Throttle: 1931 μs (93.1%)[0m
+[0;32mI (3759) BLDC_Control: ADC: 3841, Throttle: 1937 μs (93.7%)[0m
+[0;32mI (3799) BLDC_Control: ADC: 3867, Throttle: 1944 μs (94.4%)[0m
+[0;32mI (3839) BLDC_Control: ADC: 3890, Throttle: 1949 μs (94.9%)[0m
+[0;32mI (3879) BLDC_Control: ADC: 3910, Throttle: 1954 μs (95.4%)[0m
+[0;32mI (3919) BLDC_Control: ADC: 3928, Throttle: 1959 μs (95.9%)[0m
+[0;32mI (3959) BLDC_Control: ADC: 3945, Throttle: 1963 μs (96.3%)[0m
+[0;32mI (3999) BLDC_Control: ADC: 3960, Throttle: 1967 μs (96.7%)[0m
+[0;32mI (4039) BLDC_Control: ADC: 3973, Throttle: 1970 μs (97.0%)[0m
+[0;32mI (4079) BLDC_Control: ADC: 3986, Throttle: 1973 μs (97.3%)[0m
+[0;32mI (4119) BLDC_Control: ADC: 3996, Throttle: 1975 μs (97.5%)[0m
+[0;32mI (4159) BLDC_Control: ADC: 3954, Throttle: 1965 μs (96.5%)[0m
+[0;32mI (4199) BLDC_Control: ADC: 3864, Throttle: 1943 μs (94.3%)[0m
+[0;32mI (4239) BLDC_Control: ADC: 3743, Throttle: 1914 μs (91.4%)[0m
+[0;32mI (4279) BLDC_Control: ADC: 3597, Throttle: 1878 μs (87.8%)[0m
+[0;32mI (4319) BLDC_Control: ADC: 3425, Throttle: 1836 μs (83.6%)[0m
+EC - PTIT
+[0;32mI (4359) BLDC_Control: ADC: 3231, Throttle: 1789 μs (78.9%)[0m
+[0;32mI (4399) BLDC_Control: ADC: 3017, Throttle: 1736 μs (73.6%)[0m
+[0;32mI (4439) BLDC_Control: ADC: 2781, Throttle: 1679 μs (67.9%)[0m
+[0;32mI (4479) BLDC_Control: ADC: 2524, Throttle: 1616 μs (61.6%)[0m
+[0;32mI (4519) BLDC_Control: ADC: 2272, Throttle: 1554 μs (55.4%)[0m
+[0;32mI (4559) BLDC_Control: ADC: 2045, Throttle: 1499 μs (49.9%)[0m
+[0;32mI (4599) BLDC_Control: ADC: 1840, Throttle: 1449 μs (44.9%)[0m
+[0;32mI (4639) BLDC_Control: ADC: 1656, Throttle: 1404 μs (40.4%)[0m
+[0;32mI (4679) BLDC_Control: ADC: 1490, Throttle: 1363 μs (36.3%)[0m
+[0;32mI (4719) BLDC_Control: ADC: 1341, Throttle: 1327 μs (32.7%)[0m
+[0;32mI (4759) BLDC_Control: ADC: 1207, Throttle: 1294 μs (29.4%)[0m
+[0;32mI (4799) BLDC_Control: ADC: 1086, Throttle: 1265 μs (26.5%)[0m
+[0;32mI (4839) BLDC_Control: ADC:  978, Throttle: 1238 μs (23.8%)[0m
+[0;32mI (4879) BLDC_Control: ADC:  880, Throttle: 1214 μs (21.4%)[0m
+[0;32mI (4919) BLDC_Control: ADC:  792, Throttle: 1193 μs (19.3%)[0m
+[0;32mI (4959) BLDC_Control: ADC:  713, Throttle: 1174 μs (17.4%)[0m
+[0;32mI (4999) BLDC_Control: ADC:  641, Throttle: 1156 μs (15.6%)[0m
+[0;32mI (5039) BLDC_Control: ADC:  577, Throttle: 1140 μs (14.0%)[0m
+[0;32mI (5079) BLDC_Control: ADC:  519, Throttle: 1126 μs (12.6%)[0m
+[0;32mI (5119) BLDC_Control: ADC:  467, Throttle: 1114 μs (11.4%)[0m
+[0;32mI (5159) BLDC_Control: ADC:  421, Throttle: 1102 μs (10.2%)[0m
+[0;32mI (5199) BLDC_Control: ADC:  378, Throttle: 1092 μs (9.2%)[0m
+[0;32mI (5239) BLDC_Control: ADC:  341, Throttle: 1083 μs (8.3%)[0m
+[0;32mI (5279) BLDC_Control: ADC:  306, Throttle: 1074 μs (7.4%)[0m
+[0;32mI (5319) BLDC_Control: ADC:  276, Throttle: 1067 μs (6.7%)[0m
+EC - PTIT
+[0;32mI (5359) BLDC_Control: ADC:  248, Throttle: 1060 μs (6.0%)[0m
+[0;32mI (5399) BLDC_Control: ADC:  223, Throttle: 1054 μs (5.4%)[0m
+[0;32mI (5439) BLDC_Control: ADC:  201, Throttle: 1049 μs (4.9%)[0m
+[0;32mI (5479) BLDC_Control: ADC:  181, Throttle: 1044 μs (4.4%)[0m
+[0;32mI (5519) BLDC_Control: ADC:  163, Throttle: 1039 μs (3.9%)[0m
+[0;32mI (5559) BLDC_Control: ADC:  146, Throttle: 1035 μs (3.5%)[0m
+[0;32mI (5599) BLDC_Control: ADC:  132, Throttle: 1032 μs (3.2%)[0m
+[0;32mI (5639) BLDC_Control: ADC:  118, Throttle: 1028 μs (2.8%)[0m
+[0;32mI (5679) BLDC_Control: ADC:  107, Throttle: 1026 μs (2.6%)[0m
+[0;32mI (5719) BLDC_Control: ADC:   96, Throttle: 1023 μs (2.3%)[0m
+[0;32mI (5759) BLDC_Control: ADC:   86, Throttle: 1021 μs (2.1%)[0m
+[0;32mI (5799) BLDC_Control: ADC:   78, Throttle: 1019 μs (1.9%)[0m
+[0;32mI (5839) BLDC_Control: ADC:   70, Throttle: 1017 μs (1.7%)[0m
+[0;32mI (5879) BLDC_Control: ADC:   63, Throttle: 1015 μs (1.5%)[0m
+[0;32mI (5919) BLDC_Control: ADC:   56, Throttle: 1013 μs (1.3%)[0m
+[0;32mI (5959) BLDC_Control: ADC:   51, Throttle: 1012 μs (1.2%)[0m
+[0;32mI (5999) BLDC_Control: ADC:   46, Throttle: 1011 μs (1.1%)[0m
+[0;32mI (6039) BLDC_Control: ADC:   41, Throttle: 1010 μs (1.0%)[0m
+[0;32mI (6079) BLDC_Control: ADC:   37, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6119) BLDC_Control: ADC:   33, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6159) BLDC_Control: ADC:   30, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6199) BLDC_Control: ADC:   27, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6239) BLDC_Control: ADC:   24, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6279) BLDC_Control: ADC:   22, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6319) BLDC_Control: ADC:   19, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (6319) BLDC_Control: Heap còn trống: 295884 bytes[0m
+[0;32mI (6319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (6319) BLDC_Control: Throttle hiện tại: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (6329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (6329) BLDC_Control: Giá trị biến trở làm mịn: 19.8[0m
+[0;32mI (6339) BLDC_Control: ==========================[0m
+[0;32mI (6359) BLDC_Control: ADC:   17, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6399) BLDC_Control: ADC:   16, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6439) BLDC_Control: ADC:   14, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6479) BLDC_Control: ADC:   13, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6519) BLDC_Control: ADC:   11, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6559) BLDC_Control: ADC:   10, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6599) BLDC_Control: ADC:    9, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6639) BLDC_Control: ADC:    8, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6679) BLDC_Control: ADC:    7, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6719) BLDC_Control: ADC:    6, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6759) BLDC_Control: ADC:    6, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6799) BLDC_Control: ADC:    5, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6839) BLDC_Control: ADC:    5, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6879) BLDC_Control: ADC:    4, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6919) BLDC_Control: ADC:    4, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6959) BLDC_Control: ADC:    3, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (6999) BLDC_Control: ADC:    3, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7039) BLDC_Control: ADC:    2, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7079) BLDC_Control: ADC:    2, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7119) BLDC_Control: ADC:    2, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7159) BLDC_Control: ADC:    2, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7199) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7239) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7279) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7319) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (7359) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7399) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7439) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (7999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (8359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (8999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (9319) BLDC_Control: Heap còn trống: 295884 bytes[0m
+[0;32mI (9319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (9319) BLDC_Control: Throttle hiện tại: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (9329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (9329) BLDC_Control: Giá trị biến trở làm mịn: 0.0[0m
+[0;32mI (9339) BLDC_Control: ==========================[0m
+[0;32mI (9359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (9999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (10359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (10999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (11359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (11999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (12319) BLDC_Control: Heap còn trống: 295780 bytes[0m
+[0;32mI (12319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (12319) BLDC_Control: Throttle hiện tại: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (12329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (12329) BLDC_Control: Giá trị biến trở làm mịn: 0.0[0m
+[0;32mI (12339) BLDC_Control: ==========================[0m
+[0;32mI (12359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (12999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (13359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (13999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (14359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (14999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (15319) BLDC_Control: Heap còn trống: 295740 bytes[0m
+[0;32mI (15319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (15319) BLDC_Control: Throttle hiện tại: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (15329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (15329) BLDC_Control: Giá trị biến trở làm mịn: 0.0[0m
+[0;32mI (15339) BLDC_Control: ==========================[0m
+[0;32mI (15359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (15999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (16359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (16999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (17359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (17999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (18319) BLDC_Control: Heap còn trống: 295708 bytes[0m
+[0;32mI (18319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (18319) BLDC_Control: Throttle hiện tại: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (18329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (18329) BLDC_Control: Giá trị biến trở làm mịn: 0.0[0m
+[0;32mI (18339) BLDC_Control: ==========================[0m
+[0;32mI (18359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (18999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (19359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (19999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (20359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (20999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (21319) BLDC_Control: Heap còn trống: 295708 bytes[0m
+[0;32mI (21319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (21319) BLDC_Control: Throttle hiện tại: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (21329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (21329) BLDC_Control: Giá trị biến trở làm mịn: 0.0[0m
+[0;32mI (21339) BLDC_Control: ==========================[0m
+[0;32mI (21359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (21999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (22039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (22079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (22119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (22159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (22199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (22239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (22279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (22319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (22359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (22399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (22439) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (22479) BLDC_Control: ADC:   19, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (22519) BLDC_Control: ADC:   50, Throttle: 1012 μs (1.2%)[0m
+[0;32mI (22559) BLDC_Control: ADC:   95, Throttle: 1023 μs (2.3%)[0m
+[0;32mI (22599) BLDC_Control: ADC:  151, Throttle: 1036 μs (3.6%)[0m
+[0;32mI (22639) BLDC_Control: ADC:  219, Throttle: 1053 μs (5.3%)[0m
+[0;32mI (22679) BLDC_Control: ADC:  297, Throttle: 1072 μs (7.2%)[0m
+[0;32mI (22719) BLDC_Control: ADC:  386, Throttle: 1094 μs (9.4%)[0m
+[0;32mI (22759) BLDC_Control: ADC:  486, Throttle: 1118 μs (11.8%)[0m
+[0;32mI (22799) BLDC_Control: ADC:  601, Throttle: 1146 μs (14.6%)[0m
+[0;32mI (22839) BLDC_Control: ADC:  726, Throttle: 1177 μs (17.7%)[0m
+[0;32mI (22879) BLDC_Control: ADC:  862, Throttle: 1210 μs (21.0%)[0m
+[0;32mI (22919) BLDC_Control: ADC: 1004, Throttle: 1245 μs (24.5%)[0m
+[0;32mI (22959) BLDC_Control: ADC: 1152, Throttle: 1281 μs (28.1%)[0m
+[0;32mI (22999) BLDC_Control: ADC: 1305, Throttle: 1318 μs (31.8%)[0m
+[0;32mI (23039) BLDC_Control: ADC: 1468, Throttle: 1358 μs (35.8%)[0m
+[0;32mI (23079) BLDC_Control: ADC: 1644, Throttle: 1401 μs (40.1%)[0m
+[0;32mI (23119) BLDC_Control: ADC: 1825, Throttle: 1445 μs (44.5%)[0m
+[0;32mI (23159) BLDC_Control: ADC: 2016, Throttle: 1492 μs (49.2%)[0m
+[0;32mI (23199) BLDC_Control: ADC: 2208, Throttle: 1539 μs (53.9%)[0m
+[0;32mI (23239) BLDC_Control: ADC: 2385, Throttle: 1582 μs (58.2%)[0m
+[0;32mI (23279) BLDC_Control: ADC: 2556, Throttle: 1624 μs (62.4%)[0m
+[0;32mI (23319) BLDC_Control: ADC: 2710, Throttle: 1661 μs (66.1%)[0m
+EC - PTIT
+[0;32mI (23359) BLDC_Control: ADC: 2848, Throttle: 1695 μs (69.5%)[0m
+[0;32mI (23399) BLDC_Control: ADC: 2973, Throttle: 1726 μs (72.6%)[0m
+[0;32mI (23439) BLDC_Control: ADC: 3080, Throttle: 1752 μs (75.2%)[0m
+[0;32mI (23479) BLDC_Control: ADC: 3147, Throttle: 1768 μs (76.8%)[0m
+[0;32mI (23519) BLDC_Control: ADC: 3157, Throttle: 1770 μs (77.0%)[0m
+[0;32mI (23559) BLDC_Control: ADC: 3115, Throttle: 1760 μs (76.0%)[0m
+[0;32mI (23599) BLDC_Control: ADC: 3030, Throttle: 1739 μs (73.9%)[0m
+[0;32mI (23639) BLDC_Control: ADC: 2913, Throttle: 1711 μs (71.1%)[0m
+[0;32mI (23679) BLDC_Control: ADC: 2768, Throttle: 1675 μs (67.5%)[0m
+[0;32mI (23719) BLDC_Control: ADC: 2600, Throttle: 1634 μs (63.4%)[0m
+[0;32mI (23759) BLDC_Control: ADC: 2416, Throttle: 1589 μs (58.9%)[0m
+[0;32mI (23799) BLDC_Control: ADC: 2221, Throttle: 1542 μs (54.2%)[0m
+[0;32mI (23839) BLDC_Control: ADC: 2007, Throttle: 1490 μs (49.0%)[0m
+[0;32mI (23879) BLDC_Control: ADC: 1806, Throttle: 1441 μs (44.1%)[0m
+[0;32mI (23919) BLDC_Control: ADC: 1626, Throttle: 1397 μs (39.7%)[0m
+[0;32mI (23959) BLDC_Control: ADC: 1463, Throttle: 1357 μs (35.7%)[0m
+[0;32mI (23999) BLDC_Control: ADC: 1317, Throttle: 1321 μs (32.1%)[0m
+[0;32mI (24039) BLDC_Control: ADC: 1185, Throttle: 1289 μs (28.9%)[0m
+[0;32mI (24079) BLDC_Control: ADC: 1066, Throttle: 1260 μs (26.0%)[0m
+[0;32mI (24119) BLDC_Control: ADC:  960, Throttle: 1234 μs (23.4%)[0m
+[0;32mI (24159) BLDC_Control: ADC:  864, Throttle: 1210 μs (21.0%)[0m
+[0;32mI (24199) BLDC_Control: ADC:  777, Throttle: 1189 μs (18.9%)[0m
+[0;32mI (24239) BLDC_Control: ADC:  700, Throttle: 1170 μs (17.0%)[0m
+[0;32mI (24279) BLDC_Control: ADC:  630, Throttle: 1153 μs (15.3%)[0m
+[0;32mI (24319) BLDC_Control: ADC:  567, Throttle: 1138 μs (13.8%)[0m
+[0;32mI (24319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (24319) BLDC_Control: Heap còn trống: 295708 bytes[0m
+[0;32mI (24319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (24319) BLDC_Control: Throttle hiện tại: 1138 μs (13.8%)[0m
+EC - PTIT
+[0;32mI (24329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (24329) BLDC_Control: Giá trị biến trở làm mịn: 567.0[0m
+[0;32mI (24339) BLDC_Control: ==========================[0m
+[0;32mI (24359) BLDC_Control: ADC:  510, Throttle: 1124 μs (12.4%)[0m
+[0;32mI (24399) BLDC_Control: ADC:  459, Throttle: 1112 μs (11.2%)[0m
+[0;32mI (24439) BLDC_Control: ADC:  413, Throttle: 1100 μs (10.0%)[0m
+[0;32mI (24479) BLDC_Control: ADC:  372, Throttle: 1090 μs (9.0%)[0m
+[0;32mI (24519) BLDC_Control: ADC:  334, Throttle: 1081 μs (8.1%)[0m
+[0;32mI (24559) BLDC_Control: ADC:  301, Throttle: 1073 μs (7.3%)[0m
+[0;32mI (24599) BLDC_Control: ADC:  271, Throttle: 1066 μs (6.6%)[0m
+[0;32mI (24639) BLDC_Control: ADC:  244, Throttle: 1059 μs (5.9%)[0m
+[0;32mI (24679) BLDC_Control: ADC:  219, Throttle: 1053 μs (5.3%)[0m
+[0;32mI (24719) BLDC_Control: ADC:  197, Throttle: 1048 μs (4.8%)[0m
+[0;32mI (24759) BLDC_Control: ADC:  177, Throttle: 1043 μs (4.3%)[0m
+[0;32mI (24799) BLDC_Control: ADC:  160, Throttle: 1039 μs (3.9%)[0m
+[0;32mI (24839) BLDC_Control: ADC:  144, Throttle: 1035 μs (3.5%)[0m
+[0;32mI (24879) BLDC_Control: ADC:  129, Throttle: 1031 μs (3.1%)[0m
+[0;32mI (24919) BLDC_Control: ADC:  116, Throttle: 1028 μs (2.8%)[0m
+[0;32mI (24959) BLDC_Control: ADC:  105, Throttle: 1025 μs (2.5%)[0m
+[0;32mI (24999) BLDC_Control: ADC:   94, Throttle: 1022 μs (2.2%)[0m
+[0;32mI (25039) BLDC_Control: ADC:   85, Throttle: 1020 μs (2.0%)[0m
+[0;32mI (25079) BLDC_Control: ADC:   76, Throttle: 1018 μs (1.8%)[0m
+[0;32mI (25119) BLDC_Control: ADC:   68, Throttle: 1016 μs (1.6%)[0m
+[0;32mI (25159) BLDC_Control: ADC:   62, Throttle: 1015 μs (1.5%)[0m
+[0;32mI (25199) BLDC_Control: ADC:   55, Throttle: 1013 μs (1.3%)[0m
+[0;32mI (25239) BLDC_Control: ADC:   50, Throttle: 1012 μs (1.2%)[0m
+[0;32mI (25279) BLDC_Control: ADC:   48, Throttle: 1011 μs (1.1%)[0m
+[0;32mI (25319) BLDC_Control: ADC:   63, Throttle: 1015 μs (1.5%)[0m
+EC - PTIT
+[0;32mI (25359) BLDC_Control: ADC:   90, Throttle: 1021 μs (2.1%)[0m
+[0;32mI (25399) BLDC_Control: ADC:  122, Throttle: 1029 μs (2.9%)[0m
+[0;32mI (25439) BLDC_Control: ADC:  159, Throttle: 1038 μs (3.8%)[0m
+[0;32mI (25479) BLDC_Control: ADC:  200, Throttle: 1048 μs (4.8%)[0m
+[0;32mI (25519) BLDC_Control: ADC:  241, Throttle: 1058 μs (5.8%)[0m
+[0;32mI (25559) BLDC_Control: ADC:  285, Throttle: 1069 μs (6.9%)[0m
+[0;32mI (25599) BLDC_Control: ADC:  330, Throttle: 1080 μs (8.0%)[0m
+[0;32mI (25639) BLDC_Control: ADC:  376, Throttle: 1091 μs (9.1%)[0m
+[0;32mI (25679) BLDC_Control: ADC:  425, Throttle: 1103 μs (10.3%)[0m
+[0;32mI (25719) BLDC_Control: ADC:  478, Throttle: 1116 μs (11.6%)[0m
+[0;32mI (25759) BLDC_Control: ADC:  534, Throttle: 1130 μs (13.0%)[0m
+[0;32mI (25799) BLDC_Control: ADC:  594, Throttle: 1145 μs (14.5%)[0m
+[0;32mI (25839) BLDC_Control: ADC:  660, Throttle: 1161 μs (16.1%)[0m
+[0;32mI (25879) BLDC_Control: ADC:  732, Throttle: 1178 μs (17.8%)[0m
+[0;32mI (25919) BLDC_Control: ADC:  808, Throttle: 1197 μs (19.7%)[0m
+[0;32mI (25959) BLDC_Control: ADC:  888, Throttle: 1216 μs (21.6%)[0m
+[0;32mI (25999) BLDC_Control: ADC:  967, Throttle: 1236 μs (23.6%)[0m
+[0;32mI (26039) BLDC_Control: ADC: 1047, Throttle: 1255 μs (25.5%)[0m
+[0;32mI (26079) BLDC_Control: ADC: 1126, Throttle: 1274 μs (27.4%)[0m
+[0;32mI (26119) BLDC_Control: ADC: 1205, Throttle: 1294 μs (29.4%)[0m
+[0;32mI (26159) BLDC_Control: ADC: 1285, Throttle: 1313 μs (31.3%)[0m
+[0;32mI (26199) BLDC_Control: ADC: 1371, Throttle: 1334 μs (33.4%)[0m
+[0;32mI (26239) BLDC_Control: ADC: 1462, Throttle: 1357 μs (35.7%)[0m
+[0;32mI (26279) BLDC_Control: ADC: 1554, Throttle: 1379 μs (37.9%)[0m
+[0;32mI (26319) BLDC_Control: ADC: 1645, Throttle: 1401 μs (40.1%)[0m
+EC - PTIT
+[0;32mI (26359) BLDC_Control: ADC: 1733, Throttle: 1423 μs (42.3%)[0m
+[0;32mI (26399) BLDC_Control: ADC: 1825, Throttle: 1445 μs (44.5%)[0m
+[0;32mI (26439) BLDC_Control: ADC: 1915, Throttle: 1467 μs (46.7%)[0m
+[0;32mI (26479) BLDC_Control: ADC: 2005, Throttle: 1489 μs (48.9%)[0m
+[0;32mI (26519) BLDC_Control: ADC: 2098, Throttle: 1512 μs (51.2%)[0m
+[0;32mI (26559) BLDC_Control: ADC: 2194, Throttle: 1535 μs (53.5%)[0m
+[0;32mI (26599) BLDC_Control: ADC: 2293, Throttle: 1559 μs (55.9%)[0m
+[0;32mI (26639) BLDC_Control: ADC: 2396, Throttle: 1585 μs (58.5%)[0m
+[0;32mI (26679) BLDC_Control: ADC: 2502, Throttle: 1610 μs (61.0%)[0m
+[0;32mI (26719) BLDC_Control: ADC: 2612, Throttle: 1637 μs (63.7%)[0m
+[0;32mI (26759) BLDC_Control: ADC: 2727, Throttle: 1665 μs (66.5%)[0m
+[0;32mI (26799) BLDC_Control: ADC: 2857, Throttle: 1697 μs (69.7%)[0m
+[0;32mI (26839) BLDC_Control: ADC: 2980, Throttle: 1727 μs (72.7%)[0m
+[0;32mI (26879) BLDC_Control: ADC: 3092, Throttle: 1755 μs (75.5%)[0m
+[0;32mI (26919) BLDC_Control: ADC: 3192, Throttle: 1779 μs (77.9%)[0m
+[0;32mI (26959) BLDC_Control: ADC: 3282, Throttle: 1801 μs (80.1%)[0m
+[0;32mI (26999) BLDC_Control: ADC: 3364, Throttle: 1821 μs (82.1%)[0m
+[0;32mI (27039) BLDC_Control: ADC: 3437, Throttle: 1839 μs (83.9%)[0m
+[0;32mI (27079) BLDC_Control: ADC: 3502, Throttle: 1855 μs (85.5%)[0m
+[0;32mI (27119) BLDC_Control: ADC: 3562, Throttle: 1869 μs (86.9%)[0m
+[0;32mI (27159) BLDC_Control: ADC: 3615, Throttle: 1882 μs (88.2%)[0m
+[0;32mI (27199) BLDC_Control: ADC: 3663, Throttle: 1894 μs (89.4%)[0m
+[0;32mI (27239) BLDC_Control: ADC: 3706, Throttle: 1905 μs (90.5%)[0m
+[0;32mI (27279) BLDC_Control: ADC: 3745, Throttle: 1914 μs (91.4%)[0m
+[0;32mI (27319) BLDC_Control: ADC: 3780, Throttle: 1923 μs (92.3%)[0m
+[0;32mI (27319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (27319) BLDC_Control: Heap còn trống: 295708 bytes[0m
+[0;32mI (27319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (27319) BLDC_Control: Throttle hiện tại: 1923 μs (92.3%)[0m
+EC - PTIT
+[0;32mI (27329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (27329) BLDC_Control: Giá trị biến trở làm mịn: 3780.4[0m
+[0;32mI (27339) BLDC_Control: ==========================[0m
+[0;32mI (27359) BLDC_Control: ADC: 3811, Throttle: 1930 μs (93.0%)[0m
+[0;32mI (27399) BLDC_Control: ADC: 3840, Throttle: 1937 μs (93.7%)[0m
+[0;32mI (27439) BLDC_Control: ADC: 3865, Throttle: 1943 μs (94.3%)[0m
+[0;32mI (27479) BLDC_Control: ADC: 3888, Throttle: 1949 μs (94.9%)[0m
+[0;32mI (27519) BLDC_Control: ADC: 3909, Throttle: 1954 μs (95.4%)[0m
+[0;32mI (27559) BLDC_Control: ADC: 3927, Throttle: 1958 μs (95.8%)[0m
+[0;32mI (27599) BLDC_Control: ADC: 3944, Throttle: 1963 μs (96.3%)[0m
+[0;32mI (27639) BLDC_Control: ADC: 3959, Throttle: 1966 μs (96.6%)[0m
+[0;32mI (27679) BLDC_Control: ADC: 3973, Throttle: 1970 μs (97.0%)[0m
+[0;32mI (27719) BLDC_Control: ADC: 3985, Throttle: 1973 μs (97.3%)[0m
+[0;32mI (27759) BLDC_Control: ADC: 3996, Throttle: 1975 μs (97.5%)[0m
+[0;32mI (27799) BLDC_Control: ADC: 4006, Throttle: 1978 μs (97.8%)[0m
+[0;32mI (27839) BLDC_Control: ADC: 4015, Throttle: 1980 μs (98.0%)[0m
+[0;32mI (27879) BLDC_Control: ADC: 4023, Throttle: 1982 μs (98.2%)[0m
+[0;32mI (27919) BLDC_Control: ADC: 4030, Throttle: 1984 μs (98.4%)[0m
+[0;32mI (27959) BLDC_Control: ADC: 4036, Throttle: 1985 μs (98.5%)[0m
+[0;32mI (27999) BLDC_Control: ADC: 4042, Throttle: 1987 μs (98.7%)[0m
+[0;32mI (28039) BLDC_Control: ADC: 4047, Throttle: 1988 μs (98.8%)[0m
+[0;32mI (28079) BLDC_Control: ADC: 4052, Throttle: 1989 μs (98.9%)[0m
+[0;32mI (28119) BLDC_Control: ADC: 4056, Throttle: 1990 μs (99.0%)[0m
+[0;32mI (28159) BLDC_Control: ADC: 4060, Throttle: 1991 μs (99.1%)[0m
+[0;32mI (28199) BLDC_Control: ADC: 4064, Throttle: 1992 μs (99.2%)[0m
+[0;32mI (28239) BLDC_Control: ADC: 4067, Throttle: 1993 μs (99.3%)[0m
+[0;32mI (28279) BLDC_Control: ADC: 4069, Throttle: 1993 μs (99.3%)[0m
+[0;32mI (28319) BLDC_Control: ADC: 4072, Throttle: 1994 μs (99.4%)[0m
+EC - PTIT
+[0;32mI (28359) BLDC_Control: ADC: 4074, Throttle: 1994 μs (99.4%)[0m
+[0;32mI (28399) BLDC_Control: ADC: 4076, Throttle: 1995 μs (99.5%)[0m
+[0;32mI (28439) BLDC_Control: ADC: 4078, Throttle: 1995 μs (99.5%)[0m
+[0;32mI (28479) BLDC_Control: ADC: 4080, Throttle: 1996 μs (99.6%)[0m
+[0;32mI (28519) BLDC_Control: ADC: 4081, Throttle: 1996 μs (99.6%)[0m
+[0;32mI (28559) BLDC_Control: ADC: 4082, Throttle: 1996 μs (99.6%)[0m
+[0;32mI (28599) BLDC_Control: ADC: 4084, Throttle: 1997 μs (99.7%)[0m
+[0;32mI (28639) BLDC_Control: ADC: 4085, Throttle: 1997 μs (99.7%)[0m
+[0;32mI (28679) BLDC_Control: ADC: 4086, Throttle: 1997 μs (99.7%)[0m
+[0;32mI (28719) BLDC_Control: ADC: 4087, Throttle: 1998 μs (99.8%)[0m
+[0;32mI (28759) BLDC_Control: ADC: 4087, Throttle: 1998 μs (99.8%)[0m
+[0;32mI (28799) BLDC_Control: ADC: 4088, Throttle: 1998 μs (99.8%)[0m
+[0;32mI (28839) BLDC_Control: ADC: 4089, Throttle: 1998 μs (99.8%)[0m
+[0;32mI (28879) BLDC_Control: ADC: 4089, Throttle: 1998 μs (99.8%)[0m
+[0;32mI (28919) BLDC_Control: ADC: 4090, Throttle: 1998 μs (99.8%)[0m
+[0;32mI (28959) BLDC_Control: ADC: 4090, Throttle: 1998 μs (99.8%)[0m
+[0;32mI (28999) BLDC_Control: ADC: 4091, Throttle: 1999 μs (99.9%)[0m
+[0;32mI (29039) BLDC_Control: ADC: 4091, Throttle: 1999 μs (99.9%)[0m
+[0;32mI (29079) BLDC_Control: ADC: 4091, Throttle: 1999 μs (99.9%)[0m
+[0;32mI (29119) BLDC_Control: ADC: 4092, Throttle: 1999 μs (99.9%)[0m
+[0;32mI (29159) BLDC_Control: ADC: 4092, Throttle: 1999 μs (99.9%)[0m
+[0;32mI (29199) BLDC_Control: ADC: 4092, Throttle: 1999 μs (99.9%)[0m
+[0;32mI (29239) BLDC_Control: ADC: 4092, Throttle: 1999 μs (99.9%)[0m
+[0;32mI (29279) BLDC_Control: ADC: 4067, Throttle: 1993 μs (99.3%)[0m
+[0;32mI (29319) BLDC_Control: ADC: 4007, Throttle: 1978 μs (97.8%)[0m
+EC - PTIT
+[0;32mI (29359) BLDC_Control: ADC: 3922, Throttle: 1957 μs (95.7%)[0m
+[0;32mI (29399) BLDC_Control: ADC: 3819, Throttle: 1932 μs (93.2%)[0m
+[0;32mI (29439) BLDC_Control: ADC: 3701, Throttle: 1903 μs (90.3%)[0m
+[0;32mI (29479) BLDC_Control: ADC: 3566, Throttle: 1870 μs (87.0%)[0m
+[0;32mI (29519) BLDC_Control: ADC: 3415, Throttle: 1833 μs (83.3%)[0m
+[0;32mI (29559) BLDC_Control: ADC: 3242, Throttle: 1791 μs (79.1%)[0m
+[0;32mI (29599) BLDC_Control: ADC: 3042, Throttle: 1742 μs (74.2%)[0m
+[0;32mI (29639) BLDC_Control: ADC: 2818, Throttle: 1688 μs (68.8%)[0m
+[0;32mI (29679) BLDC_Control: ADC: 2581, Throttle: 1630 μs (63.0%)[0m
+[0;32mI (29719) BLDC_Control: ADC: 2337, Throttle: 1570 μs (57.0%)[0m
+[0;32mI (29759) BLDC_Control: ADC: 2103, Throttle: 1513 μs (51.3%)[0m
+[0;32mI (29799) BLDC_Control: ADC: 1893, Throttle: 1462 μs (46.2%)[0m
+[0;32mI (29839) BLDC_Control: ADC: 1704, Throttle: 1416 μs (41.6%)[0m
+[0;32mI (29879) BLDC_Control: ADC: 1533, Throttle: 1374 μs (37.4%)[0m
+[0;32mI (29919) BLDC_Control: ADC: 1380, Throttle: 1336 μs (33.6%)[0m
+[0;32mI (29959) BLDC_Control: ADC: 1242, Throttle: 1303 μs (30.3%)[0m
+[0;32mI (29999) BLDC_Control: ADC: 1118, Throttle: 1273 μs (27.3%)[0m
+[0;32mI (30039) BLDC_Control: ADC: 1006, Throttle: 1245 μs (24.5%)[0m
+[0;32mI (30079) BLDC_Control: ADC:  905, Throttle: 1221 μs (22.1%)[0m
+[0;32mI (30119) BLDC_Control: ADC:  815, Throttle: 1199 μs (19.9%)[0m
+[0;32mI (30159) BLDC_Control: ADC:  733, Throttle: 1178 μs (17.8%)[0m
+[0;32mI (30199) BLDC_Control: ADC:  660, Throttle: 1161 μs (16.1%)[0m
+[0;32mI (30239) BLDC_Control: ADC:  594, Throttle: 1145 μs (14.5%)[0m
+[0;32mI (30279) BLDC_Control: ADC:  534, Throttle: 1130 μs (13.0%)[0m
+[0;32mI (30319) BLDC_Control: ADC:  481, Throttle: 1117 μs (11.7%)[0m
+[0;32mI (30319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (30319) BLDC_Control: Heap còn trống: 295708 bytes[0m
+[0;32mI (30319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (30319) BLDC_Control: Throttle hiện tại: 1117 μs (11.7%)[0m
+EC - PTIT
+[0;32mI (30329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (30329) BLDC_Control: Giá trị biến trở làm mịn: 481.3[0m
+[0;32mI (30339) BLDC_Control: ==========================[0m
+[0;32mI (30359) BLDC_Control: ADC:  433, Throttle: 1105 μs (10.5%)[0m
+[0;32mI (30399) BLDC_Control: ADC:  389, Throttle: 1094 μs (9.4%)[0m
+[0;32mI (30439) BLDC_Control: ADC:  350, Throttle: 1085 μs (8.5%)[0m
+[0;32mI (30479) BLDC_Control: ADC:  315, Throttle: 1076 μs (7.6%)[0m
+[0;32mI (30519) BLDC_Control: ADC:  284, Throttle: 1069 μs (6.9%)[0m
+[0;32mI (30559) BLDC_Control: ADC:  255, Throttle: 1062 μs (6.2%)[0m
+[0;32mI (30599) BLDC_Control: ADC:  230, Throttle: 1056 μs (5.6%)[0m
+[0;32mI (30639) BLDC_Control: ADC:  207, Throttle: 1050 μs (5.0%)[0m
+[0;32mI (30679) BLDC_Control: ADC:  186, Throttle: 1045 μs (4.5%)[0m
+[0;32mI (30719) BLDC_Control: ADC:  167, Throttle: 1040 μs (4.0%)[0m
+[0;32mI (30759) BLDC_Control: ADC:  151, Throttle: 1036 μs (3.6%)[0m
+[0;32mI (30799) BLDC_Control: ADC:  135, Throttle: 1032 μs (3.2%)[0m
+[0;32mI (30839) BLDC_Control: ADC:  122, Throttle: 1029 μs (2.9%)[0m
+[0;32mI (30879) BLDC_Control: ADC:  110, Throttle: 1026 μs (2.6%)[0m
+[0;32mI (30919) BLDC_Control: ADC:   99, Throttle: 1024 μs (2.4%)[0m
+[0;32mI (30959) BLDC_Control: ADC:   89, Throttle: 1021 μs (2.1%)[0m
+[0;32mI (30999) BLDC_Control: ADC:   80, Throttle: 1019 μs (1.9%)[0m
+[0;32mI (31039) BLDC_Control: ADC:   72, Throttle: 1017 μs (1.7%)[0m
+[0;32mI (31079) BLDC_Control: ADC:   65, Throttle: 1015 μs (1.5%)[0m
+[0;32mI (31119) BLDC_Control: ADC:   58, Throttle: 1014 μs (1.4%)[0m
+[0;32mI (31159) BLDC_Control: ADC:   52, Throttle: 1012 μs (1.2%)[0m
+[0;32mI (31199) BLDC_Control: ADC:   47, Throttle: 1011 μs (1.1%)[0m
+[0;32mI (31239) BLDC_Control: ADC:   42, Throttle: 1010 μs (1.0%)[0m
+[0;32mI (31279) BLDC_Control: ADC:   38, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31319) BLDC_Control: ADC:   34, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (31359) BLDC_Control: ADC:   31, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31399) BLDC_Control: ADC:   27, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31439) BLDC_Control: ADC:   25, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31479) BLDC_Control: ADC:   22, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31519) BLDC_Control: ADC:   20, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31559) BLDC_Control: ADC:   18, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31599) BLDC_Control: ADC:   16, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31639) BLDC_Control: ADC:   14, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31679) BLDC_Control: ADC:   13, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31719) BLDC_Control: ADC:   12, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31759) BLDC_Control: ADC:   10, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31799) BLDC_Control: ADC:    9, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31839) BLDC_Control: ADC:    8, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31879) BLDC_Control: ADC:    7, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31919) BLDC_Control: ADC:    7, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31959) BLDC_Control: ADC:    6, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (31999) BLDC_Control: ADC:    5, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32039) BLDC_Control: ADC:    5, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32079) BLDC_Control: ADC:    4, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32119) BLDC_Control: ADC:    4, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32159) BLDC_Control: ADC:    3, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32199) BLDC_Control: ADC:    3, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32239) BLDC_Control: ADC:    3, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32279) BLDC_Control: ADC:    2, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32319) BLDC_Control: ADC:    2, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (32359) BLDC_Control: ADC:    2, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32399) BLDC_Control: ADC:    2, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32439) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32479) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32519) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32559) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32599) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32639) BLDC_Control: ADC:    1, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (32999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (33319) BLDC_Control: Heap còn trống: 295708 bytes[0m
+[0;32mI (33319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (33319) BLDC_Control: Throttle hiện tại: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (33329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (33329) BLDC_Control: Giá trị biến trở làm mịn: 0.2[0m
+[0;32mI (33339) BLDC_Control: ==========================[0m
+[0;32mI (33359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (33999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (34359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (34999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (35359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (35999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (36319) BLDC_Control: Heap còn trống: 295708 bytes[0m
+[0;32mI (36319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (36319) BLDC_Control: Throttle hiện tại: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (36329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (36329) BLDC_Control: Giá trị biến trở làm mịn: 0.0[0m
+[0;32mI (36339) BLDC_Control: ==========================[0m
+[0;32mI (36359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (36999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (37359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (37999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (38359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (38999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (39319) BLDC_Control: Heap còn trống: 295676 bytes[0m
+[0;32mI (39319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (39319) BLDC_Control: Throttle hiện tại: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (39329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (39329) BLDC_Control: Giá trị biến trở làm mịn: 0.0[0m
+[0;32mI (39339) BLDC_Control: ==========================[0m
+[0;32mI (39359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (39999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (40359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (40999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (41359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (41999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (42319) BLDC_Control: Heap còn trống: 295676 bytes[0m
+[0;32mI (42319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (42319) BLDC_Control: Throttle hiện tại: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (42329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (42329) BLDC_Control: Giá trị biến trở làm mịn: 0.0[0m
+[0;32mI (42339) BLDC_Control: ==========================[0m
+[0;32mI (42359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (42999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (43359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (43999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (44359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (44999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (45319) BLDC_Control: Heap còn trống: 295676 bytes[0m
+[0;32mI (45319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (45319) BLDC_Control: Throttle hiện tại: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (45329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (45329) BLDC_Control: Giá trị biến trở làm mịn: 0.0[0m
+[0;32mI (45339) BLDC_Control: ==========================[0m
+[0;32mI (45359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (45999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (46359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (46999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (47359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47399) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47439) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47479) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47519) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47559) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47599) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47639) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47679) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47719) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47759) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47799) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47839) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47879) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47919) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47959) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (47999) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (48039) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (48079) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (48119) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (48159) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (48199) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (48239) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (48279) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (48319) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;32mI (48319) BLDC_Control: === TRẠNG THÁI HỆ THỐNG ===[0m
+[0;32mI (48319) BLDC_Control: Heap còn trống: 295676 bytes[0m
+[0;32mI (48319) BLDC_Control: BLDC đã Armed: CÓ[0m
+[0;32mI (48319) BLDC_Control: Throttle hiện tại: 1000 μs (0.0%)[0m
+EC - PTIT
+[0;32mI (48329) BLDC_Control: Số task đang chạy: 4[0m
+[0;32mI (48329) BLDC_Control: Giá trị biến trở làm mịn: 0.0[0m
+[0;32mI (48339) BLDC_Control: ==========================[0m
+[0;32mI (48359) BLDC_Control: ADC:    0, Throttle: 1000 μs (0.0%)[0m
+[0;

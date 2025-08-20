@@ -1,0 +1,31 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.4.2\project\testProject\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Espressif/frameworks/esp-idf-v5.4.2/project/testProject/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6570 bytes. 0xa90 bytes (9%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from C:/Espressif/frameworks/esp-idf-v5.4.2/project/testProject/main/main.c:6:
+C:/Espressif/frameworks/esp-idf-v5.4.2/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+C:/Espressif/frameworks/esp-idf-v5.4.2/project/testProject/main/main.c: In function 'potentiometer_bldc_task':
+C:/Espressif/frameworks/esp-idf-v5.4.2/project/testProject/main/main.c:121:5: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+  121 |     adc1_config_channel_atten(POT_ADC_CHANNEL, ADC_ATTEN_DB_11);  // Dải 0-3.3V
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Espressif/frameworks/esp-idf-v5.4.2/components/driver/deprecated/driver/adc_types_legacy.h:8,
+                 from C:/Espressif/frameworks/esp-idf-v5.4.2/components/driver/deprecated/driver/adc.h:15:
+C:/Espressif/frameworks/esp-idf-v5.4.2/components/hal/include/hal/adc_types.h:51:5: note: declared here
+   51 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Building C object CMakeFiles/blink.elf.dir/project_elf_src_esp32.c.obj
+[8/10] Linking CXX executable blink.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Espressif/frameworks/esp-idf-v5.4.2/project/testProject/build/blink.bin
+[10/10] C:\Windows\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.4.2\project\testProject\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.4.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Espressif/frameworks/esp-idf-v5.4.2/project/testProject/build/partition_table/partition-table.bin C:/Espressif/frameworks/esp-idf-v5.4.2/project/testProject/build/blink.bin"
+blink.bin binary size 0x316a0 bytes. Smallest app partition is 0x100000 bytes. 0xce960 bytes (81%) free.
