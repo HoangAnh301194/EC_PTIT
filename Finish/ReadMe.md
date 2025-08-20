@@ -11,9 +11,11 @@
         - RTOS bản chất vẫn chạy lần lượt qua các tác vụ, tuy nhiên chỉ chạy với thời gian cho phép , nếu quá thời gian thì chuyển qua tác vụ khác , tránh làm mất thời gian hoạt động của các tác vụ khác, các task được thực thi liên tục, nhanh tới mức gần như hoạt động song song cùng 1 lúc -> hoạt động các task sẽ được ấn định theo thời gian thực mà ko phụ thuộc và yếu tố khác như delay từ các tác vụ trước
 
         ![alt text](image-1.png)
-        
+
         - Vòng loop thông thường : chạy từ trên xuống và tiếp tục vòng tuần hoàn lặp lại , với lợi thế là đơn giản, dễ hiểu , phù hợp cho dự án nhỏ ít tác vụ, nhưng sẽ khó quản lí nếu mở rộng project. 
 - Ví dụ thực tiễn:
+
+    ![alt text](image-4.png)
 
     - Trong Drone, khi cảm biến con quay hồi chuyển (Gyroscope) phát hiện drone bị nghiêng, bộ điều khiển phải tính toán PID và điều chỉnh tốc độ động cơ ngay lập tức. Nếu trễ chỉ 50–100 ms, drone có thể mất cân bằng và rơi.
 
@@ -38,6 +40,8 @@ Một số tính năng chính của FreeRTOS (hệ điều hành được tích 
 
 - Semaphore và Mutex (Đồng bộ tài nguyên):
 
+    ![alt text](image-3.png)
+
     Ngăn chặn xung đột khi nhiều task cùng truy cập một thiết bị.
     -  Ví dụ: Một task đọc dữ liệu từ cảm biến I2C trong khi task khác cũng muốn gửi dữ liệu qua I2C -> Mutex giúp “khóa” bus I2C để tránh lỗi.
 
@@ -45,6 +49,8 @@ Một số tính năng chính của FreeRTOS (hệ điều hành được tích 
 
     Dùng để truyền dữ liệu giữa các task.
     -  Ví dụ: Task đọc cảm biến gửi dữ liệu vào hàng đợi, Task điều khiển sẽ lấy dữ liệu từ hàng đợi để tính toán PID.
+    
+    ![alt text](image-2.png)
 
 - Timer Service (Bộ đếm thời gian):
 
@@ -169,3 +175,11 @@ Một số tính năng chính của FreeRTOS (hệ điều hành được tích 
     - code Web : [https://github.com/HoangAnh301194/EC_PTIT/blob/main/Finish/BLE/src/Web_BLE.html](https://github.com/HoangAnh301194/EC_PTIT/blob/main/Finish/BLE/src/Web_BLE.html)
     - link Web githubPages : [https://hoanganh301194.github.io/BLE_Website/](https://hoanganh301194.github.io/BLE_Website/)
 4. Demo hoạt động thực tế 
+    Sơ đồ giao tiếp giữa ESP và Web BLE trong cả quá trình. 
+
+    ![alt text](image-5.png)
+    ![alt text](image-6.png)
+    ![alt text](image-7.png)
+    ![alt text](image-8.png)
+    
+    
